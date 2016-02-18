@@ -1,0 +1,28 @@
+{
+  "name": "placard-api",
+  "version": "0.0.1",
+  "description": "Placard API client library for node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efernandesng/placard-api.git"
+  },
+  "keywords": [
+    "placard",
+    "api",
+    "jogossantacasa"
+  ],
+  "author": "Emanuel Fernandes <efernandes@tektorque.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/efernandesng/placard-api/issues"
+  },
+  "homepage": "https://github.com/efernandesng/placard-api#readme",
+  "dependencies": {
+    "bluebird": "^3.3.1",
+    "superagent": "^1.7.2"
+  }
+}
