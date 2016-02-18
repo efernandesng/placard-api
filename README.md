@@ -9,17 +9,19 @@ A simple [placard](https://www.jogossantacasa.pt/web/Placard) API client library
 
 ## Example
 
-    const placard = require('placard-api');
+```javascript
+const placard = require('placard-api');
 
-    placard.nextEvents((err, data)=> {
-        console.log(data)
-    })
+placard.nextEvents((err, data)=> {
+    console.log(data)
+})
 
-    // or
+// or
 
-    placard.nextEvents().then((data)=> {
-        console.log(data)
-    })
+placard.nextEvents().then((data)=> {
+    console.log(data)
+})
+```
 
 ## Documentation
 
