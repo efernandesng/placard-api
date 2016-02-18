@@ -1,4 +1,5 @@
 const Promise = require('bluebird');
+const moment = require('moment');
 const request = require('superagent');
 
 const URL = 'www.jogossantacasa.pt';
@@ -18,6 +19,7 @@ function req(options) {
                 appClient: APP_CLIENT,
                 appVersion: APP_VERSION
             }, options.query))
+            .set('If-Modified-Since', moment().format('ddd, D MMM YYYY HH:mm:ss [GMT]Z'))
             .set('User-Agent', USER_AGENT)
             .end((err, res)=> {
                 if (err) return reject(err);
