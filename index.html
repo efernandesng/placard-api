@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Placard-api by efernandesng</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Placard-api</h1>
+        <h2>Placard API client library for node.js</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/efernandesng/placard-api/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/efernandesng/placard-api/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/efernandesng/placard-api" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="placard-api" class="anchor" href="#placard-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Placard-API</h1>
+
+<p>A simple <a href="https://www.jogossantacasa.pt/web/Placard">placard</a> API client library for <a href="http://nodejs.org">node.js</a>.</p>
+
+<p><a href="https://www.npmjs.com/package/placard-api"><img src="https://badge.fury.io/js/placard-api.svg" alt="npm version"></a>
+<a href="https://travis-ci.org/efernandesng/placard-api"><img src="https://travis-ci.org/efernandesng/placard-api.svg?branch=master" alt="Build Status"></a></p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ npm install placard-api</pre></div>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">placard</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>placard-api<span class="pl-pds">'</span></span>);
+
+<span class="pl-smi">placard</span>.<span class="pl-en">nextEvents</span>((<span class="pl-smi">err</span>, <span class="pl-smi">data</span>)<span class="pl-k">=&gt;</span> {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(data)
+})
+
+<span class="pl-c">// or</span>
+
+<span class="pl-smi">placard</span>.<span class="pl-en">nextEvents</span>().<span class="pl-en">then</span>((<span class="pl-smi">data</span>)<span class="pl-k">=&gt;</span> {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(data)
+})</pre></div>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h2>
+
+<ul>
+<li>
+<strong>faq</strong> - <em>List of Contents for Info</em>
+</li>
+<li><strong>fullSportsBook</strong></li>
+<li><strong>info</strong></li>
+<li><strong>nextEvents</strong></li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="https://github.com/efernandesng/placard-api/blob/master/LICENSE.md">MIT</a></p>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-41429148-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
