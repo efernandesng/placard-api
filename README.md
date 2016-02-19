@@ -1,4 +1,4 @@
-Placard-API
+Placard API
 ===========
 
 A simple [placard](https://www.jogossantacasa.pt/web/Placard) API client library for [node.js](http://nodejs.org).
@@ -31,10 +31,10 @@ placard.nextEvents().then((data)=> {
 
 ## Documentation
 
-- **faq** - *List of Contents for Info*
-- **fullSportsBook**
-- **info**
-- **nextEvents**
+- **faq([callback]) -> Promise**
+- **fullSportsBook([callback]) -> Promise**
+- **info([callbacl]) -> Promise**
+- **nextEvents([callback]) -> Promise**
 
 
 ## License
