@@ -1,7 +1,11 @@
 Placard-API
 ===========
 
-A simple [placard](https://www.jogossantacasa.pt/web/Placard) API client library for node.js
+A simple [placard](https://www.jogossantacasa.pt/web/Placard) API client library for [node.js](http://nodejs.org).
+
+[![npm version](https://badge.fury.io/js/placard-api.svg)](https://www.npmjs.com/package/placard-api)
+[![Build Status](https://travis-ci.org/efernandesng/placard-api.svg?branch=master)](https://travis-ci.org/efernandesng/placard-api)
+
 
 ## Installation
 
