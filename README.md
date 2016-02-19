@@ -36,6 +36,14 @@ placard.nextEvents().then((data)=> {
 - **info([callbacl]) -> Promise**
 - **nextEvents([callback]) -> Promise**
 
+## Tests
+
+To run the test suite, first install the dependencies, then run `npm test`:
+
+```bash
+$ npm install
+$ npm test
+```
 
 ## License
 [MIT](https://github.com/efernandesng/placard-api/blob/master/LICENSE.md)
