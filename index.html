@@ -29,7 +29,7 @@
     <div class="container">
       <section id="main_content">
         <h1>
-<a id="placard-api" class="anchor" href="#placard-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Placard-API</h1>
+<a id="placard-api" class="anchor" href="#placard-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Placard API</h1>
 
 <p>A simple <a href="https://www.jogossantacasa.pt/web/Placard">placard</a> API client library for <a href="http://nodejs.org">node.js</a>.</p>
 
@@ -60,13 +60,19 @@
 <a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h2>
 
 <ul>
-<li>
-<strong>faq</strong> - <em>List of Contents for Info</em>
-</li>
-<li><strong>fullSportsBook</strong></li>
-<li><strong>info</strong></li>
-<li><strong>nextEvents</strong></li>
+<li><strong>faq([callback]) -&gt; Promise</strong></li>
+<li><strong>fullSportsBook([callback]) -&gt; Promise</strong></li>
+<li><strong>info([callbacl]) -&gt; Promise</strong></li>
+<li><strong>nextEvents([callback]) -&gt; Promise</strong></li>
 </ul>
+
+<h2>
+<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests</h2>
+
+<p>To run the test suite, first install the dependencies, then run <code>npm test</code>:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ npm install
+$ npm <span class="pl-c1">test</span></pre></div>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
