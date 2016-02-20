@@ -5,9 +5,7 @@ const request = require('superagent');
 const URL = 'www.jogossantacasa.pt';
 const USER_AGENT = 'Dalvik';
 const API_KEY = '552CF226909890A044483CECF8196792';
-const CHANNEL = '7';
-const APP_CLIENT = 'Android.Tablet';
-const APP_VERSION = '1.0.2';
+const CHANNEL = '1';
 
 function req(options) {
     return new Promise((resolve, reject)=> {
@@ -16,8 +14,6 @@ function req(options) {
             .query(Object.assign({
                 apiKey: API_KEY,
                 channel: CHANNEL,
-                appClient: APP_CLIENT,
-                appVersion: APP_VERSION
             }, options.query))
             .set('If-Modified-Since', moment().format('ddd, D MMM YYYY HH:mm:ss [GMT]Z'))
             .set('User-Agent', USER_AGENT)
