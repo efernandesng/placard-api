@@ -5,7 +5,7 @@ A simple [placard](https://www.jogossantacasa.pt/web/Placard) API client library
 
 [![npm version](https://badge.fury.io/js/placard-api.svg)](https://www.npmjs.com/package/placard-api)
 [![Build Status](https://travis-ci.org/efernandesng/placard-api.svg?branch=master)](https://travis-ci.org/efernandesng/placard-api)
-
+[![Coverage Status](https://coveralls.io/repos/github/efernandesng/placard-api/badge.svg?branch=master)](https://coveralls.io/github/efernandesng/placard-api?branch=master)
 
 ## Installation
 
