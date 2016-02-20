@@ -14,7 +14,7 @@ function req(options) {
             .get(`https://${URL}/${options.path}`)
             .query(Object.assign({
                 apiKey: API_KEY,
-                channel: CHANNEL,
+                channel: CHANNEL
             }, options.query))
             .set('If-Modified-Since', moment().format('ddd, D MMM YYYY HH:mm:ss [GMT]Z'))
             .set('User-Agent', USER_AGENT)
