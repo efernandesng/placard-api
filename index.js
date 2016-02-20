@@ -1,9 +1,10 @@
 const Promise = require('bluebird');
 const moment = require('moment');
 const request = require('superagent');
+const pkg = require('./package.json');
 
 const URL = 'www.jogossantacasa.pt';
-const USER_AGENT = 'Dalvik';
+const USER_AGENT = `${pkg.name}/${pkg.version}`;
 const API_KEY = '552CF226909890A044483CECF8196792';
 const CHANNEL = '1';
 
