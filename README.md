@@ -33,7 +33,7 @@ placard.nextEvents().then((data)=> {
 
 - **faq([callback]) -> Promise**
 - **fullSportsBook([callback]) -> Promise**
-- **info([callbacl]) -> Promise**
+- **info([callback]) -> Promise**
 - **nextEvents([callback]) -> Promise**
 
 ## Tests
