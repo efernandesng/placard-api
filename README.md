@@ -1,6 +1,8 @@
 Placard API
 ===========
 
+[![Join the chat at https://gitter.im/efernandesng/placard-api](https://badges.gitter.im/efernandesng/placard-api.svg)](https://gitter.im/efernandesng/placard-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A simple [placard](https://www.jogossantacasa.pt/web/Placard) API client library for [node.js](http://nodejs.org).
 
 [![npm version](https://badge.fury.io/js/placard-api.svg)](https://www.npmjs.com/package/placard-api)
