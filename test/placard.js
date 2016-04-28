@@ -1,4 +1,4 @@
-const placard = require('../');
+const placard = require('../src/index');
 const should = require('should');
 const assert = require('assert');
 const util = require('util');
