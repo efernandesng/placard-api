@@ -3,14 +3,13 @@ import moment from 'moment';
 import request from 'superagent';
 import * as pkg from '../package.json';
 
-const URL = 'www.jogossantacasa.pt';
 const USER_AGENT = `${pkg.name}/${pkg.version}`;
 const API_KEY = '552CF226909890A044483CECF8196792';
 const CHANNEL = '1';
 
 const makeRequest = (options) => new Promise((resolve, reject)=> {
   request
-    .get(`https://${URL}/${options.path}`)
+    .get(`https://www.jogossantacasa.pt/${options.path}`)
     .query({
       apiKey: API_KEY,
       channel: CHANNEL,
