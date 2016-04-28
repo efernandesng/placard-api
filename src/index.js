@@ -3,60 +3,50 @@ import moment from 'moment';
 import request from 'superagent';
 import * as pkg from '../package.json';
 
-const USER_AGENT = `${pkg.name}/${pkg.version}`;
-const API_KEY = '552CF226909890A044483CECF8196792';
-const CHANNEL = '1';
+const userAgent = `${pkg.name}/${pkg.version}`;
+const apiKey = '552CF226909890A044483CECF8196792';
+const channel = '1';
 
 const makeRequest = (options) => new Promise((resolve, reject)=> {
   request
-    .get(`https://www.jogossantacasa.pt/${options.path}`)
-    .query({
-      apiKey: API_KEY,
-      channel: CHANNEL,
-      ...options.query
-    })
+    .get(`https://www.jogossantacasa.pt/${options.endpoint}`)
+    .query({apiKey, channel, ...options.query})
     .set('If-Modified-Since', moment().format('ddd, D MMM YYYY HH:mm:ss [GMT]Z'))
-    .set('User-Agent', USER_AGENT)
-    .end((err, res)=> {
+    .set('User-Agent', userAgent)
+    .end((err, {body: {header, body}})=> {
       if (err) return reject(err);
 
-      const data = res.body,
-        header = data.header;
+      const {responseSuccess, errorCode, errorMessage} = header;
 
-      if (header.responseSuccess === false) {
-        return reject(new Error(`${header.errorCode} - ${header.errorMessage}`))
+      if (responseSuccess === false) {
+        return reject(new Error(`${errorCode} - ${errorMessage}`))
       }
 
-      resolve(data.body.data);
+      resolve(body.data);
     })
 });
 
-const placard = {
-  fullSportsBook(cb) {
-    return makeRequest({
-      path: '/WebServices/SBRetailWS/FullSportsBook'
-    }).nodeify(cb)
-  },
+const endpoints = [
+  {
+    name: 'fullSportsBook',
+    endpoint: '/WebServices/SBRetailWS/FullSportsBook'
+  }, {
+    name: 'nextEvents',
+    endpoint: '/WebServices/SBRetailWS/NextEvents'
+  }, {
+    name: 'info',
+    endpoint: '/WebServices/ContentWS/Contents/',
+    query: {categoryCode: 'ADRETAILINFOS'}
+  }, {
+    name: 'faq',
+    endpoint: '/WebServices/ContentWS/Contents/',
+    query: {categoryCode: 'ADRETAILFAQSAPP'}
+  }];
 
-  nextEvents(cb) {
-    return makeRequest({
-      path: '/WebServices/SBRetailWS/NextEvents'
-    }).nodeify(cb)
-  },
-
-  info(cb) {
-    return makeRequest({
-      path: '/WebServices/ContentWS/Contents/',
-      query: {categoryCode: 'ADRETAILINFOS'}
-    }).nodeify(cb)
-  },
-
-  faq(cb) {
-    return makeRequest({
-      path: '/WebServices/ContentWS/Contents/',
-      query: {categoryCode: 'ADRETAILFAQSAPP'}
-    }).nodeify(cb)
-  }
-};
+const placard = endpoints.reduce((prev, curr)=> {
+  const {endpoint, query} = curr;
+  prev[curr.name] = (cb)=> makeRequest({endpoint, query}).nodeify(cb);
+  return prev;
+}, {});
 
 module.exports = placard;
