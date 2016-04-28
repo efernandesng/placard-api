@@ -52,4 +52,5 @@
   "engines": {
     "node": ">=4"
   }
+  "tonicExampleFilename": "example/tonic.js"
 }
