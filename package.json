@@ -28,10 +28,7 @@
   "homepage": "http://efernandesng.github.io/placard-api/",
   "dependencies": {
     "bluebird": "^3.3.5",
-    "coveralls": "^2.11.9",
-    "mocha-lcov-reporter": "^1.2.0",
     "moment": "^2.13.0",
-    "should": "^8.3.1",
     "superagent": "^1.8.3"
   },
   "devDependencies": {
