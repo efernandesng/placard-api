@@ -4,7 +4,10 @@
   "description": "Placard API client library for node.js",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "build": "babel src --out-dir dist",
+    "lint": "eslint -c .eslintrc src",
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
