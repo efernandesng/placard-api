@@ -82,8 +82,8 @@ describe('Placard', function () {
       })
     });
 
-    it('should be an array', function () {
-      assert.equal(true, util.isArray(resData))
+    it('should be an array if data !== undefined', function () {
+      if (resData) assert.equal(true, util.isArray(resData))
     })
   });
 
