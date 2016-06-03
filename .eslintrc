@@ -13,6 +13,10 @@
   ],
   "rules": {
     "strict": 0,
+    "semi": [
+      "error",
+      "never"
+    ],
     "babel/generator-star-spacing": 1,
     "babel/new-cap": 1,
     "babel/array-bracket-spacing": 1,

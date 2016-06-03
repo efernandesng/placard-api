@@ -1,11 +1,11 @@
-import Promise from 'bluebird';
-import moment from 'moment';
-import request from 'superagent';
-import * as pkg from '../package.json';
+import Promise from 'bluebird'
+import moment from 'moment'
+import request from 'superagent'
+import * as pkg from '../package.json'
 
-const userAgent = `${pkg.name}/${pkg.version}`;
-const apiKey = '552CF226909890A044483CECF8196792';
-const channel = '1';
+const userAgent = `${pkg.name}/${pkg.version}`
+const apiKey = '552CF226909890A044483CECF8196792'
+const channel = '1'
 
 const makeRequest = (options) => new Promise((resolve, reject)=> {
   request
@@ -14,17 +14,17 @@ const makeRequest = (options) => new Promise((resolve, reject)=> {
     .set('If-Modified-Since', moment().format('ddd, D MMM YYYY HH:mm:ss [GMT]Z'))
     .set('User-Agent', userAgent)
     .end((err, {body: {header, body}})=> {
-      if (err) return reject(err);
+      if (err) return reject(err)
 
-      const {responseSuccess, errorCode, errorMessage} = header;
+      const {responseSuccess, errorCode, errorMessage} = header
 
       if (responseSuccess === false) {
         return reject(new Error(`${errorCode} - ${errorMessage}`))
       }
 
-      resolve(body.data);
+      resolve(body.data)
     })
-});
+})
 
 const endpoints = [
   {
@@ -41,12 +41,12 @@ const endpoints = [
     name: 'faq',
     endpoint: '/WebServices/ContentWS/Contents/',
     query: {categoryCode: 'ADRETAILFAQSAPP'}
-  }];
+  }]
 
 const placard = endpoints.reduce((prev, curr)=> {
-  const {endpoint, query} = curr;
-  prev[curr.name] = (cb)=> makeRequest({endpoint, query}).nodeify(cb);
-  return prev;
-}, {});
+  const {endpoint, query} = curr
+  prev[curr.name] = (cb)=> makeRequest({endpoint, query}).nodeify(cb)
+  return prev
+}, {})
 
-module.exports = placard;
+module.exports = placard
