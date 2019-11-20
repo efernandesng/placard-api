@@ -20,23 +20,17 @@ $ npm install placard-api
 ```javascript
 const placard = require('placard-api');
 
-placard.nextEvents((err, data)=> {
-    console.log(data)
-})
-
-// or
-
-placard.nextEvents().then((data)=> {
-    console.log(data)
-})
+(async ()=>{
+    const nextEvents = await placard.nextEvents();
+})();
 ```
 
 ## Documentation
 
-- **faq([callback]) -> Promise**
-- **fullSportsBook([callback]) -> Promise**
-- **info([callback]) -> Promise**
-- **nextEvents([callback]) -> Promise**
+- **faq() -> Promise**
+- **fullSportsBook() -> Promise**
+- **info() -> Promise**
+- **nextEvents() -> Promise**
 
 ## Tests
 
